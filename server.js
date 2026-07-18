@@ -114,5 +114,7 @@ app.get('/api/v1/navbar', async (req, res) => {
 });
 
 // সার্ভার পোর্ট লিসেনিং
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`💻 server is raning: ${PORT}-এ`));
+const PORT = process.env.PORT || 10000; // রেন্ডার সাধারণত ১০০০০ পোর্ট ব্যবহার করে
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`💻 server is raning: ${PORT}-`);
+});
